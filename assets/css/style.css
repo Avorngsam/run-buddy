@@ -71,31 +71,6 @@ header {
     border-radius: 15px;
     text-shadow: none;
   }
-/* footer style */
-  footer {
-    background: var(--primary-color);
-    width: 100%;
-    padding: 40px 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  footer h2 {
-    color: var(--secondary-color);
-    font-size: 30px;
-    margin: 0;
-  }
-
-  footer div {
-    line-height: 1.5;
-    text-align: right;
-  }
-
-  footer a {
-    color: var(--secondary-color);
-  }
-/* footer style end */
 
 /* section tag */
   section {
@@ -232,8 +207,8 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: rotate(-58deg);
   }
 
-  .checkbox-wrapper input + label::after, 
-  .radio-wrapper input + label::after {
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
   content: none;
 }
 
@@ -245,6 +220,10 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 /* hero style end */
 
 /* basics */
+section {
+    padding: 60px;
+  }
+
 .section-title {
   font-size: 48px;
   color: var(--secondary-color);
@@ -252,7 +231,7 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding-bottom: 20px;
   text-align: center;
   margin: 0 auto 35px auto;
-  width: 50px;
+  width: 50%;
 }
 
 .primary-border {
@@ -283,17 +262,16 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--tertiary-color);
 }
-.step:last-child {
-    border-bottom: none;
+.step:not(:last-child) {
+    border-bottom: 1px solid var(--tertiary-color);
   }
 
 .steps {
-  background: #fce138;
+  background: var(--primary-color);
 }
 
-.steps img {
+.step-img {
     flex: 1 12%;
     margin-right: 20px;
 }
@@ -310,10 +288,9 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .step h3 {
-  color: var(--secondary-color);
-  font-size: 46px;
-  flex: 1 30%;
-  
+   flex: 1 30%;
+   color: var(--secondary-color);
+   font-size: 46px;
 }
 
 .step-text h4 {
@@ -330,6 +307,11 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 .step-text {
     flex: 12;
   }
+  
+.steps p {
+    color: var(--tertiary-color);
+    font-size: 23px;
+  }
 
 /*  trainers style */
 .trainers {
@@ -344,7 +326,7 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 20px;
     flex: 1;
     background: var(--secondary-color);
-    color: #fce138;
+    color: var(--primary-color);
   }
 
 .trainer img {
@@ -376,16 +358,16 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact h2 {
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 .contact-info iframe {
   height: 400px;
 }
-.contact-info{
+.contact-info {
     display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .contact-info > * {
@@ -398,7 +380,7 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact-info h3 {
-  color: #fce138;
+  color: var(--primary-color);
   font-size: 32px;
 }
 
@@ -410,7 +392,7 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact-info a {
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 .contact-form input, .contact-form textarea{
@@ -433,7 +415,7 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 .contact-form button{
     width: 100%;
     border: none;
-    background: #fce138;
+    background: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
@@ -442,7 +424,7 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form button:hover {
-    color: #fce138;
+    color: var(--primary-color);
     background: var(--tertiary-color);
   }
 
@@ -459,6 +441,33 @@ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   .text-right {
     text-align: right;
   }
+
+/* footer style */
+footer {
+    background: var(--primary-color);
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  footer h2 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  footer div {
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer a {
+    color: var(--secondary-color);
+  }
+/* footer style end */
 
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
